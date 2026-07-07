@@ -176,15 +176,21 @@ export default function CTASection() {
           transform: translateY(0);
         }
         @media (max-width: 768px) {
+          .cta-wrapper {
+            padding: 0 0 40px 0 !important;
+          }
+          .cta-container::before {
+            border-radius: 0 !important;
+          }
           .cta-heading { font-size: clamp(1.6rem, 7vw, 2.2rem); margin-bottom: 30px; }
           
-          /* Scale down and reposition images for mobile exactly like the screenshot */
-          .img-top-left { width: 26vw; height: auto; top: 5%; left: -5%; transform: translate(20px, 20px); z-index: 2; }
-          .img-top-right { width: 22vw; height: auto; top: 2%; left: 40%; transform: translate(0, 20px); z-index: 1; }
-          .img-mid-right { width: 35vw; height: auto; top: 15%; right: -5%; transform: translate(-20px, 0); z-index: 2; }
-          .img-mid-left { width: 24vw; height: auto; bottom: 20%; left: 2%; top: auto; transform: translate(20px, -20px); z-index: 2; }
-          .img-bot-right { width: 24vw; height: auto; bottom: 20%; right: 5%; transform: translate(-20px, -20px); z-index: 2; }
-          .img-bot-left { width: 35vw; height: auto; bottom: -5%; left: 35%; transform: translate(0, -20px); z-index: 3; }
+          /* Scale down and reposition images for mobile exactly like the screenshot but completely INSIDE the box */
+          .img-top-left { width: 24vw; height: auto; top: 5%; left: 2%; transform: translate(20px, 20px); z-index: 2; }
+          .img-top-right { width: 20vw; height: auto; top: 2%; left: 45%; transform: translate(0, 20px); z-index: 1; }
+          .img-mid-right { width: 30vw; height: auto; top: 20%; right: 2%; transform: translate(-20px, 0); z-index: 2; }
+          .img-mid-left { width: 22vw; height: auto; bottom: 25%; left: 2%; top: auto; transform: translate(20px, -20px); z-index: 2; }
+          .img-bot-right { width: 22vw; height: auto; bottom: 15%; right: 2%; transform: translate(-20px, -20px); z-index: 2; }
+          .img-bot-left { width: 28vw; height: auto; bottom: 2%; left: 35%; transform: translate(0, -20px); z-index: 3; }
 
           .cta-buttons {
             flex-direction: row;
@@ -202,6 +208,7 @@ export default function CTASection() {
           }
           .mascot-peek-container {
             right: 5% !important;
+            transform-origin: top center !important;
             transform: scale(0.8) translateY(-50px) !important;
           }
           .mascot-peek-container.visible {
