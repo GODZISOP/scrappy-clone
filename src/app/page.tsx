@@ -209,9 +209,7 @@ export default function Home() {
 
       <section className="trusted-section">
         <div className="trusted-section-inner">
-          <div className="trusted-bear-wrapper">
-            <Image src="/thirdsec.png" alt="Mascot" width={300} height={350} className="trusted-bear" style={{ objectFit: 'contain', objectPosition: 'bottom' }} />
-          </div>
+
           <div className="trusted-container">
             <div className="trusted-icon">❤️</div>
             <h2 className="trusted-title">Trusted by 100+ Clients<br/>in All Industries</h2>
