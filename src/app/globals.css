@@ -824,7 +824,14 @@ html {
 
   /* Products & Solutions */
   .ps-content h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .ps-content p {
+    font-size: clamp(0.85rem, 4vw, 1.1rem) !important;
+  }
+  .btn-white-ps {
+    font-size: clamp(0.85rem, 4vw, 1.1rem) !important;
+    padding: 0.8rem 1.5rem !important;
   }
   .ps-card {
     padding: 3rem 1.5rem 4rem !important; /* Force bottom padding */
@@ -878,7 +885,7 @@ html {
     font-weight: 700;
     margin-top: 0 !important;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
     display: block;
     line-height: 40px !important; /* Center text in the dedicated space */
   }
