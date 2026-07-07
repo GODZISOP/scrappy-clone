@@ -430,9 +430,9 @@ export default function Home() {
             <div className="sec7-main-image" style={{
               position: 'absolute',
               zIndex: isMobile ? 10 : 5,
-              top: isMobile ? '18%' : '50%',
+              top: isMobile ? '42%' : '50%',
               left: '50%',
-              transform: isMobile ? 'translateX(-50%)' : 'translate(-50%, -50%)',
+              transform: isMobile ? 'translateX(-50%) translateY(-50%)' : 'translate(-50%, -50%)',
               maxWidth: isMobile ? '65vw' : 'none',
             }}>
               <Image src="/sec7mainimage1.png" alt="Polo Shirt" width={isMobile ? 190 : 380} height={isMobile ? 240 : 480} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }} />
@@ -442,6 +442,7 @@ export default function Home() {
             {(() => {
               const p2Scale = Math.max(0, Math.min(1, (sec7Progress - 0.15) / 0.15)) - Math.max(0, Math.min(1, (sec7Progress - 0.45) / 0.15));
               const p3Scale = Math.max(0, Math.min(1, (sec7Progress - 0.65) / 0.15));
+              const activeMobilePhase = sec7Progress < 0.15 ? 1 : sec7Progress < 0.55 ? 2 : 3;
 
               return (
                 <>
@@ -462,31 +463,33 @@ export default function Home() {
                   </div>
                   )}
 
-                  {/* Phase 2: Mobile - 3 floating images around the shirt */}
                   {isMobile && (<>
                     {/* Top center image */}
                     <Image src="/image5.png" alt="Apparel" width={130} height={95} style={{
-                      position: 'absolute', top: '-2%', left: '50%',
-                      transform: `translateX(-50%) translateY(${(1 - p2Scale) * -40}px)`,
+                      position: 'absolute', top: '-15%', left: '50%',
+                      transform: activeMobilePhase === 2 ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-20px)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                      opacity: p2Scale, zIndex: 4,
+                      opacity: activeMobilePhase === 2 ? 1 : 0, zIndex: 4,
+                      willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
                     }} />
                     {/* Left image */}
                     <Image src="/image1.png" alt="Apparel" width={100} height={110} style={{
-                      position: 'absolute', top: '4%', left: '1%',
-                      transform: `translateX(${(1 - p2Scale) * -40}px)`,
+                      position: 'absolute', top: '0%', left: '1%',
+                      transform: activeMobilePhase === 2 ? 'translateX(0) translateY(0)' : 'translateX(-20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                      opacity: p2Scale, zIndex: 4,
+                      opacity: activeMobilePhase === 2 ? 1 : 0, zIndex: 4,
+                      willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
                     }} />
                     {/* Right image */}
                     <Image src="/image2.png" alt="Apparel" width={100} height={100} style={{
-                      position: 'absolute', top: '4%', right: '1%',
-                      transform: `translateX(${(1 - p2Scale) * 40}px)`,
+                      position: 'absolute', top: '0%', right: '1%',
+                      transform: activeMobilePhase === 2 ? 'translateX(0) translateY(0)' : 'translateX(20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                      opacity: p2Scale, zIndex: 4,
+                      opacity: activeMobilePhase === 2 ? 1 : 0, zIndex: 4,
+                      willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
                     }} />
                   </>)}
 
@@ -494,18 +497,19 @@ export default function Home() {
                   {isMobile && (
                   <div style={{
                     position: 'absolute',
-                    bottom: '0%',
-                    left: '0%',
-                    width: '100%',
+                    bottom: '-10%',
+                    left: '4%',
+                    width: '92%',
                     backgroundColor: '#f18c00',
-                    borderRadius: '30px 30px 0 0',
-                    padding: '2.5rem 1.5rem 2rem',
-                    paddingTop: '14rem',
+                    borderRadius: '24px',
+                    padding: '4rem 1.5rem 2rem',
                     zIndex: 7,
-                    opacity: p2Scale,
+                    opacity: activeMobilePhase === 2 ? 1 : 0,
                     color: '#fff',
                     textAlign: 'center',
-                    transform: `translateY(${(1 - p2Scale) * 80}px)`,
+                    transform: activeMobilePhase === 2 ? 'translateY(0)' : 'translateY(40px)',
+                    willChange: 'transform, opacity',
+                    transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
                   }}>
                     <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.75rem' }}>End-to-End Oversight</h3>
                     <p style={{ fontSize: '0.9rem', lineHeight: 1.6, opacity: 0.95 }}>
@@ -567,27 +571,30 @@ export default function Home() {
                   {isMobile && (<>
                     {/* Top center image */}
                     <Image src="/image3.png" alt="Apparel" width={130} height={95} style={{
-                      position: 'absolute', top: '-2%', left: '50%',
-                      transform: `translateX(-50%) translateY(${(1 - p3Scale) * -40}px)`,
+                      position: 'absolute', top: '-15%', left: '50%',
+                      transform: activeMobilePhase === 3 ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-20px)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                      opacity: p3Scale, zIndex: 4,
+                      opacity: activeMobilePhase === 3 ? 1 : 0, zIndex: 4,
+                      willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
                     }} />
                     {/* Left image */}
                     <Image src="/image4.png" alt="Apparel" width={100} height={110} style={{
-                      position: 'absolute', top: '4%', left: '1%',
-                      transform: `translateX(${(1 - p3Scale) * -40}px)`,
+                      position: 'absolute', top: '0%', left: '1%',
+                      transform: activeMobilePhase === 3 ? 'translateX(0) translateY(0)' : 'translateX(-20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                      opacity: p3Scale, zIndex: 4,
+                      opacity: activeMobilePhase === 3 ? 1 : 0, zIndex: 4,
+                      willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
                     }} />
                     {/* Right image */}
                     <Image src="/thirdsec.png" alt="Apparel" width={100} height={100} style={{
-                      position: 'absolute', top: '4%', right: '1%',
-                      transform: `translateX(${(1 - p3Scale) * 40}px)`,
+                      position: 'absolute', top: '0%', right: '1%',
+                      transform: activeMobilePhase === 3 ? 'translateX(0) translateY(0)' : 'translateX(20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                      opacity: p3Scale, zIndex: 4,
+                      opacity: activeMobilePhase === 3 ? 1 : 0, zIndex: 4,
+                      willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
                     }} />
                   </>)}
 
@@ -595,18 +602,19 @@ export default function Home() {
                   {isMobile && (
                   <div style={{
                     position: 'absolute',
-                    bottom: '0%',
-                    left: '0%',
-                    width: '100%',
+                    bottom: '-10%',
+                    left: '4%',
+                    width: '92%',
                     backgroundColor: '#f18c00',
-                    borderRadius: '30px 30px 0 0',
-                    padding: '2.5rem 1.5rem 2rem',
-                    paddingTop: '14rem',
+                    borderRadius: '24px',
+                    padding: '4rem 1.5rem 2rem',
                     zIndex: 7,
-                    opacity: p3Scale,
+                    opacity: activeMobilePhase === 3 ? 1 : 0,
                     color: '#fff',
                     textAlign: 'center',
-                    transform: `translateY(${(1 - p3Scale) * 80}px)`,
+                    transform: activeMobilePhase === 3 ? 'translateY(0)' : 'translateY(40px)',
+                    willChange: 'transform, opacity',
+                    transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
                   }}>
                     <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.75rem' }}>Timely Delivery</h3>
                     <p style={{ fontSize: '0.9rem', lineHeight: 1.6, opacity: 0.95 }}>
