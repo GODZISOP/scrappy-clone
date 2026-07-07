@@ -431,7 +431,7 @@ export default function Home() {
           
           <div className="sec7-heading" style={{
             position: 'absolute',
-            top: isMobile ? '5%' : '10%',
+            top: isMobile ? '2%' : '10%',
             left: '50%',
             width: '100%',
             textAlign: 'center',
@@ -467,12 +467,12 @@ export default function Home() {
             <div className="sec7-main-image" style={{
               position: 'absolute',
               zIndex: isMobile ? 10 : 5,
-              top: isMobile ? '42%' : '50%',
+              top: isMobile ? '35%' : '50%',
               left: '50%',
               transform: isMobile ? 'translateX(-50%) translateY(-50%)' : 'translate(-50%, -50%)',
-              maxWidth: isMobile ? '65vw' : 'none',
+              maxWidth: isMobile ? '50vw' : 'none',
             }}>
-              <Image src="/sec7mainimage1.png" alt="Polo Shirt" width={isMobile ? 190 : 380} height={isMobile ? 240 : 480} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }} />
+              <Image src="/sec7mainimage1.png" alt="Polo Shirt" width={isMobile ? 190 : 380} height={isMobile ? 240 : 480} style={{ objectFit: 'contain', width: '100%', maxWidth: isMobile ? '160px' : 'none', maxHeight: isMobile ? '35vh' : 'none', height: 'auto' }} />
             </div>
 
             {/* Calculations for sliding progress */}
@@ -539,7 +539,7 @@ export default function Home() {
                     width: '92%',
                     backgroundColor: '#f18c00',
                     borderRadius: '24px',
-                    padding: '4rem 1.5rem 2rem',
+                    padding: '3rem 1.25rem 1.5rem',
                     zIndex: 7,
                     opacity: activeMobilePhase === 2 ? 1 : 0,
                     color: '#fff',
@@ -548,8 +548,8 @@ export default function Home() {
                     willChange: 'transform, opacity',
                     transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
                   }}>
-                    <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.75rem' }}>End-to-End Oversight</h3>
-                    <p style={{ fontSize: '0.9rem', lineHeight: 1.6, opacity: 0.95 }}>
+                    <h3 style={{ fontSize: 'clamp(1.1rem, 5vw, 1.3rem)', fontWeight: 800, marginBottom: '0.75rem', wordBreak: 'break-word' }}>End-to-End Oversight</h3>
+                    <p style={{ fontSize: 'clamp(0.8rem, 4vw, 0.95rem)', lineHeight: 1.6, opacity: 0.95 }}>
                       Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Scrappy, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
                     </p>
                   </div>
@@ -644,7 +644,7 @@ export default function Home() {
                     width: '92%',
                     backgroundColor: '#f18c00',
                     borderRadius: '24px',
-                    padding: '4rem 1.5rem 2rem',
+                    padding: '3rem 1.25rem 1.5rem',
                     zIndex: 7,
                     opacity: activeMobilePhase === 3 ? 1 : 0,
                     color: '#fff',
@@ -653,8 +653,8 @@ export default function Home() {
                     willChange: 'transform, opacity',
                     transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
                   }}>
-                    <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.75rem' }}>Timely Delivery</h3>
-                    <p style={{ fontSize: '0.9rem', lineHeight: 1.6, opacity: 0.95 }}>
+                    <h3 style={{ fontSize: 'clamp(1.1rem, 5vw, 1.3rem)', fontWeight: 800, marginBottom: '0.75rem', wordBreak: 'break-word' }}>Timely Delivery</h3>
+                    <p style={{ fontSize: 'clamp(0.8rem, 4vw, 0.95rem)', lineHeight: 1.6, opacity: 0.95 }}>
                       Brands that break promises don't last long in this industry. That's why we guarantee on-time delivery for all orders, big or small. Our nationwide supply chain offers lightning-fast fulfillment to keep your customers happy.
                     </p>
                   </div>
