@@ -15,6 +15,7 @@ export default function Home() {
   const sec7Ref = useRef<HTMLElement>(null);
   const [sec7Progress, setSec7Progress] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
@@ -109,19 +110,55 @@ export default function Home() {
           </div>
         </Link>
         
-        <nav className="nav-links">
-          <Link href="#" className="nav-link">Solutions <span className="nav-dot"></span></Link>
-          <Link href="#" className="nav-link">Products <span className="nav-dot"></span></Link>
-          <Link href="#" className="nav-link">Industries <span className="nav-dot"></span></Link>
-          <Link href="#" className="nav-link">Pricing <span className="nav-dot"></span></Link>
-          <Link href="#" className="nav-link">About Us</Link>
-          <Link href="#" className="nav-link">Resources <span className="nav-dot"></span></Link>
-        </nav>
+        {!isMobile && (
+          <>
+            <nav className="nav-links">
+              <Link href="#" className="nav-link">Solutions <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Products <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Industries <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Pricing <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">About Us</Link>
+              <Link href="#" className="nav-link">Resources <span className="nav-dot"></span></Link>
+            </nav>
 
-        <div className="header-actions">
-          <Link href="#" className="btn btn-yellow">Let's Talk</Link>
-          <Link href="#" className="btn btn-dark">Start Your Order</Link>
-        </div>
+            <div className="header-actions">
+              <Link href="#" className="btn btn-yellow">Let's Talk</Link>
+              <Link href="#" className="btn btn-dark">Start Your Order</Link>
+            </div>
+          </>
+        )}
+
+        {isMobile && (
+          <button className="hamburger-btn" onClick={() => setIsMenuOpen(true)}>
+            <div className="hamburger-line"></div>
+            <div className="hamburger-line"></div>
+            <div className="hamburger-line"></div>
+          </button>
+        )}
+
+        {/* Mobile Menu Overlay */}
+        {isMobile && isMenuOpen && (
+          <div className="mobile-menu-overlay">
+            <div className="mobile-menu-header">
+              <span className="mobile-menu-title">Menu</span>
+              <button className="mobile-menu-close" onClick={() => setIsMenuOpen(false)}>✕</button>
+            </div>
+            
+            <nav className="mobile-nav-links">
+              <Link href="#" className="mobile-nav-link">Solutions <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Products <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Industries <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Pricing <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">About Us</Link>
+              <Link href="#" className="mobile-nav-link">Resources <span className="arrow">›</span></Link>
+            </nav>
+
+            <div className="mobile-menu-actions">
+              <Link href="#" className="btn btn-yellow mobile-btn-full">Let's Talk</Link>
+              <Link href="#" className="btn btn-dark mobile-btn-full">Start Your Order</Link>
+            </div>
+          </div>
+        )}
       </header>
 
       <section className="hero">
