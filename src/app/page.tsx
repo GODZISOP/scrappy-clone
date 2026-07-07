@@ -330,7 +330,7 @@ export default function Home() {
               <Link href="#" className="btn-white-ps">View Products</Link>
             </div>
             <div className="ps-images ps-images-products" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
-              <Image src="/mockup-product-hoodie.png" alt="Hoodie" width={380} height={440} style={{ objectFit: 'contain', objectPosition: 'bottom', transform: 'translateY(100px)' }} unoptimized />
+              <Image src="/mockup-product-hoodie.png" alt="Hoodie" width={380} height={440} style={{ objectFit: 'contain', objectPosition: 'bottom', transform: 'translateY(110px)' }} unoptimized />
             </div>
           </div>
 
