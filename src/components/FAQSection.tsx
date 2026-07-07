@@ -7,8 +7,8 @@ const faqs = [
     answer: "Our standard turnaround time is 10-14 business days after proof approval. We also offer rush services if you need your order sooner."
   },
   {
-    question: "Does Scrappy Apparel Offer Design Services?",
-    answer: "Yes, Scrappy Apparel offers basic branding and design services based on your existing logos and branding guidelines. We do not provide logo design or rebranding services, but can connect you with our affiliate partner agencies and freelancers if needed."
+    question: "Does Total Printing Solution Offer Design Services?",
+    answer: "Yes, Total Printing Solution offers basic branding and design services based on your existing logos and branding guidelines. We do not provide logo design or rebranding services, but can connect you with our affiliate partner agencies and freelancers if needed."
   },
   {
     question: "Do You Offer International Shipping For Apparel Products?",

@@ -96,7 +96,7 @@ export default function Footer() {
 
       <div className="footer-content">
         <div className="footer-top">
-          <Image src="/logo.png" alt="Scrappy Apparel Company" width={200} height={60} style={{ objectFit: 'contain' }} />
+          <Image src="/man-logo.jpg" alt="Total Printing Solution" width={200} height={60} style={{ objectFit: 'contain' }} unoptimized />
         </div>
 
         <div className="footer-columns">
@@ -135,7 +135,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div className="footer-bottom-text">2026 All Rights Reserved &ndash; Scrappy Apparel Company</div>
+        <div className="footer-bottom-text">2026 All Rights Reserved &ndash; Total Printing Solution</div>
         
         <div className="social-icons">
           <Link href="#" className="social-icon" aria-label="Facebook">

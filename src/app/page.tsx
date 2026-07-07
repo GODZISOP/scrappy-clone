@@ -59,21 +59,21 @@ export default function Home() {
   const solutions = [
     {
       header: "Get Uniforms for My Team",
-      image: "/image1.png",
+      image: "/mockup-hat.png",
       title: "Uniform Systems for ",
       titleBold: "Growing Teams",
       desc: "Sublimated uniforms, polos, hats, and apparel systems built for consistency across teams, locations, and repeat orders",
     },
     {
       header: "Print Merch or Apparel",
-      image: "/image2.png",
+      image: "/mockup-bags.png",
       title: "Premium Screen Printing & ",
       titleBold: "Merch Programs",
       desc: "High-quality screen printing, oversized graphics, specialty inks, and merch programs designed for brands, events, and seasonal drops.",
     },
     {
-      header: "Scrappy Color System",
-      image: "/image3.png",
+      header: "Total Printing Solution Color System",
+      image: "/mockup-man-box.jpg",
       title: "",
       titleBold: "Pantone-Matched ",
       titleSuffix: "Garments",
@@ -81,17 +81,17 @@ export default function Home() {
     },
     {
       header: "Partner as a Design Agency",
-      image: "/image4.png",
+      image: "/mockup-group.jpg",
       title: "Production Systems for ",
       titleBold: "Design Agencies",
       desc: "A sublimation-first apparel production partner supporting agency-led client work with reliable manufacturing and technical execution",
     },
     {
       header: "Fulfillment Orders & Inventory",
-      image: "/image5.png",
+      image: "/mockup-box.png",
       title: "Uniform & Merch ",
       titleBold: "Fulfillment Solutions",
-      desc: "Inventory storage, pick-pack-ship, merch drops, and uniform restocks managed through Scrappy's 3PL MGMT platform.",
+      desc: "Inventory storage, pick-pack-ship, merch drops, and uniform restocks managed through Total Printing Solution's 3PL MGMT platform.",
     }
   ];
 
@@ -102,11 +102,11 @@ export default function Home() {
   return (
     <main>
       <header className="header">
-        <Link href="/" className="logo-container">
-          <Image src="/logo-transparent.png" alt="Logo" width={isMobile ? 32 : 40} height={isMobile ? 36 : 45} style={{ objectFit: 'contain' }} />
-          <div className="logo-text-wrapper">
-            <span className="logo-main-text">SCRAPPY</span>
-            <span className="logo-sub-text">APPAREL COMPANY</span>
+        <Link href="/" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+          <Image src="/man-logo.jpg" alt="Total Printing Solution Logo" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <span style={{ fontSize: isMobile ? '13px' : '16px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>TOTAL PRINTING</span>
+            <span style={{ fontSize: isMobile ? '11px' : '13px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>SOLUTION</span>
           </div>
         </Link>
         
@@ -170,7 +170,7 @@ export default function Home() {
         </div>
         <div className="hero-image-container">
           <Image 
-            src="/hero-transparent.png" 
+            src="/imagenewheader.png" 
             alt="Hero Image"
             width={800}
             height={800}
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="solution-card" key={index}>
               <div className="card-header">{card.header}</div>
               <div className="card-image" style={{ position: 'relative', width: '100%', height: '160px', backgroundColor: '#ddd' }}>
-                <Image src={card.image} alt={card.titleBold} fill style={{ objectFit: 'cover' }} />
+                <Image src={card.image} alt={card.titleBold} fill style={{ objectFit: 'cover' }} quality={100} unoptimized />
               </div>
               <div className="card-body">
                 <h3 className="card-title">
@@ -210,7 +210,7 @@ export default function Home() {
       <section className="trusted-section">
         <div className="trusted-section-inner">
           <div className="trusted-bear-wrapper">
-            <Image src="/thirdsec.png" alt="Scrappy Mascot" width={300} height={350} className="trusted-bear" style={{ objectFit: 'contain', objectPosition: 'bottom' }} />
+            <Image src="/thirdsec.png" alt="Mascot" width={300} height={350} className="trusted-bear" style={{ objectFit: 'contain', objectPosition: 'bottom' }} />
           </div>
           <div className="trusted-container">
             <div className="trusted-icon">❤️</div>
@@ -297,7 +297,7 @@ export default function Home() {
                 A True Full-<br/>Service Apparel<br/>Partner
               </div>
               <div className="pill-desc-container" style={{ opacity: expandProgress }}>
-                Scrappy does more than print t-shirts — we're your full-service apparel partner. We take care of everything from sourcing and printing to shipping, so you can focus on growing your brand.
+                Total Printing Solution does more than print t-shirts — we're your full-service apparel partner. We take care of everything from sourcing and printing to shipping, so you can focus on growing your brand.
               </div>
             </div>
 
@@ -331,23 +331,8 @@ export default function Home() {
               <p>Browse our selection of premium apparel, printed to<br/>perfection and delivered retail-ready.</p>
               <Link href="#" className="btn-white-ps">View Products</Link>
             </div>
-            <div className="ps-images ps-images-products">
-              <div className="prod-item img-center">
-                <Image src="/Sec5image1.png" alt="Hoodies" width={250} height={300} className="prod-img" style={{ objectFit: 'contain' }} />
-                <span className="prod-label">Hoodies</span>
-              </div>
-              <div className="prod-item img-left">
-                <Image src="/sec5image2.png" alt="Polo T-Shirt" width={220} height={280} className="prod-img" style={{ objectFit: 'contain' }} />
-                <span className="prod-label">Polo T-Shirt</span>
-              </div>
-              <div className="prod-item img-right">
-                <Image src="/sec5image3.png" alt="T-Shirts" width={220} height={280} className="prod-img" style={{ objectFit: 'contain' }} />
-                <span className="prod-label">T-Shirts</span>
-              </div>
-              <div className="prod-item img-hat">
-                <Image src="/sec5image4.png" alt="Hats" width={120} height={100} className="prod-img" style={{ objectFit: 'contain' }} />
-                <span className="prod-label">Hats</span>
-              </div>
+            <div className="ps-images ps-images-products" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+              <Image src="/mockup-product-hoodie.png" alt="Hoodie" width={380} height={400} style={{ objectFit: 'contain', objectPosition: 'bottom', transform: 'translateY(20px)' }} unoptimized />
             </div>
           </div>
 
@@ -359,7 +344,7 @@ export default function Home() {
               <Link href="#" className="btn-white-ps">View Solutions</Link>
             </div>
             <div className="ps-images ps-images-solutions">
-              <Image src="/sec5image1box2.png" alt="Forklift" width={400} height={350} className="sol-img" style={{ objectFit: 'contain' }} />
+              <Image src="/mockup-forklift-transparent.png" alt="Forklift" width={400} height={350} className="sol-img" style={{ objectFit: 'contain' }} unoptimized />
             </div>
           </div>
         </div>
@@ -368,7 +353,7 @@ export default function Home() {
       <section className="dominate-section">
         <div className="dominate-container">
           <div className="dominate-left">
-            <h2 className="dominate-title">Dominate the<br/>Market with<br/>Scrappy Apparel</h2>
+            <h2 className="dominate-title">Dominate the<br/>Market with<br/>Total Printing Solution</h2>
             <p className="dominate-desc">
               Our Brand Building Process (BBP) takes you from pricing to<br/>
               production with retail-level quality, service, and speed.
@@ -472,7 +457,7 @@ export default function Home() {
               transform: isMobile ? 'translateX(-50%) translateY(-50%)' : 'translate(-50%, -50%)',
               maxWidth: isMobile ? '50vw' : 'none',
             }}>
-              <Image src="/sec7mainimage1.png" alt="Polo Shirt" width={isMobile ? 190 : 380} height={isMobile ? 240 : 480} style={{ objectFit: 'contain', width: '100%', maxWidth: isMobile ? '160px' : 'none', maxHeight: isMobile ? '35vh' : 'none', height: 'auto' }} />
+              <Image src="/mockup-product-polo.png" alt="Polo Shirt" width={isMobile ? 190 : 380} height={isMobile ? 240 : 480} style={{ objectFit: 'contain', width: '100%', maxWidth: isMobile ? '160px' : 'none', maxHeight: isMobile ? '35vh' : 'none', height: 'auto' }} unoptimized />
             </div>
 
             {/* Calculations for sliding progress */}
@@ -494,43 +479,40 @@ export default function Home() {
                     transform: `translateX(${(1 - p2Scale) * -20}vw)`,
                     zIndex: 4,
                   }}>
-                    <Image src="/image5.png" alt="Hoodie" width={240} height={160} style={{ position: 'absolute', top: '5%', left: '35%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
-                    <Image src="/image1.png" alt="T-Shirt" width={260} height={180} style={{ position: 'absolute', top: '35%', left: '5%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
-                    <Image src="/image2.png" alt="Guy with backpack" width={180} height={260} style={{ position: 'absolute', top: '65%', left: '45%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
+                    <Image src="/mockup-cup.png" alt="Cup" width={210} height={140} style={{ position: 'absolute', top: '2%', left: '35%', objectFit: 'contain', borderRadius: '12px' }} unoptimized />
+                    <Image src="/mockup-bags.png" alt="Bags" width={230} height={160} style={{ position: 'absolute', top: '38%', left: '5%', objectFit: 'contain', borderRadius: '12px' }} unoptimized />
+                    <Image src="/mockup-group.jpg" alt="Group" width={150} height={230} style={{ position: 'absolute', top: '72%', left: '45%', objectFit: 'cover', borderRadius: '12px' }} unoptimized />
                   </div>
                   )}
 
                   {isMobile && (<>
                     {/* Top center image */}
-                    <Image src="/image5.png" alt="Apparel" width={130} height={95} style={{
-                      position: 'absolute', top: '-15%', left: '50%',
-                      width: '32vw', maxWidth: '130px', height: 'auto',
+                    <Image src="/mockup-cup.png" alt="Cup" width={110} height={80} style={{
+                      position: 'absolute', top: '-18%', left: '50%',
+                      width: '30vw', maxWidth: '110px', height: 'auto',
                       transform: activeMobilePhase === 2 ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-20px)',
-                      objectFit: 'cover', borderRadius: '12px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      objectFit: 'contain', borderRadius: '12px',
                       opacity: activeMobilePhase === 2 ? 1 : 0, zIndex: 4,
                       willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
-                    }} />
+                    }} unoptimized />
                     {/* Left image */}
-                    <Image src="/image1.png" alt="Apparel" width={100} height={110} style={{
-                      position: 'absolute', top: '0%', left: '1%',
-                      width: '26vw', maxWidth: '100px', height: 'auto',
+                    <Image src="/mockup-bags.png" alt="Bags" width={90} height={100} style={{
+                      position: 'absolute', top: '5%', left: '2%',
+                      width: '24vw', maxWidth: '90px', height: 'auto',
                       transform: activeMobilePhase === 2 ? 'translateX(0) translateY(0)' : 'translateX(-20px) translateY(0)',
-                      objectFit: 'cover', borderRadius: '12px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      objectFit: 'contain', borderRadius: '12px',
                       opacity: activeMobilePhase === 2 ? 1 : 0, zIndex: 4,
                       willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
-                    }} />
+                    }} unoptimized />
                     {/* Right image */}
-                    <Image src="/image2.png" alt="Apparel" width={100} height={100} style={{
-                      position: 'absolute', top: '0%', right: '1%',
-                      width: '26vw', maxWidth: '100px', height: 'auto',
+                    <Image src="/mockup-group.jpg" alt="Group" width={90} height={90} style={{
+                      position: 'absolute', top: '5%', right: '2%',
+                      width: '24vw', maxWidth: '90px', height: 'auto',
                       transform: activeMobilePhase === 2 ? 'translateX(0) translateY(0)' : 'translateX(20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
                       opacity: activeMobilePhase === 2 ? 1 : 0, zIndex: 4,
                       willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 2 ? 'auto' : 'none'
-                    }} />
+                    }} unoptimized />
                   </>)}
 
                   {/* Phase 2: Mobile orange card - text only */}
@@ -553,7 +535,7 @@ export default function Home() {
                   }}>
                     <h3 style={{ fontSize: 'clamp(1.1rem, 5vw, 1.3rem)', fontWeight: 800, marginBottom: '0.75rem', wordBreak: 'break-word' }}>End-to-End Oversight</h3>
                     <p style={{ fontSize: 'clamp(0.8rem, 4vw, 0.95rem)', lineHeight: 1.6, opacity: 0.95 }}>
-                      Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Scrappy, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
+                      Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Total Printing Solution, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
                     </p>
                   </div>
                   )}
@@ -576,7 +558,7 @@ export default function Home() {
                     <div style={{ width: '560px', minWidth: '560px', paddingLeft: '220px', paddingRight: '40px', color: '#ffffff', boxSizing: 'border-box' }}>
                       <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.8rem' }}>End-to-End Oversight</h3>
                       <p style={{ fontSize: '0.95rem', lineHeight: 1.5, opacity: 0.95 }}>
-                        Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Scrappy, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
+                        Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Total Printing Solution, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
                       </p>
                     </div>
                   </div>
@@ -610,35 +592,32 @@ export default function Home() {
                   {/* Phase 3: Mobile - 3 floating images around the shirt */}
                   {isMobile && (<>
                     {/* Top center image */}
-                    <Image src="/image3.png" alt="Apparel" width={130} height={95} style={{
-                      position: 'absolute', top: '-15%', left: '50%',
-                      width: '32vw', maxWidth: '130px', height: 'auto',
+                    <Image src="/mockup-hat.png" alt="Hat" width={110} height={80} style={{
+                      position: 'absolute', top: '-18%', left: '50%',
+                      width: '30vw', maxWidth: '110px', height: 'auto',
                       transform: activeMobilePhase === 3 ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-20px)',
-                      objectFit: 'cover', borderRadius: '12px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      objectFit: 'contain', borderRadius: '12px',
                       opacity: activeMobilePhase === 3 ? 1 : 0, zIndex: 4,
                       willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
-                    }} />
+                    }} unoptimized />
                     {/* Left image */}
-                    <Image src="/image4.png" alt="Apparel" width={100} height={110} style={{
-                      position: 'absolute', top: '0%', left: '1%',
-                      width: '26vw', maxWidth: '100px', height: 'auto',
+                    <Image src="/mockup-man-box.jpg" alt="Man Box" width={90} height={100} style={{
+                      position: 'absolute', top: '5%', left: '2%',
+                      width: '24vw', maxWidth: '90px', height: 'auto',
                       transform: activeMobilePhase === 3 ? 'translateX(0) translateY(0)' : 'translateX(-20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
                       opacity: activeMobilePhase === 3 ? 1 : 0, zIndex: 4,
                       willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
-                    }} />
+                    }} unoptimized />
                     {/* Right image */}
-                    <Image src="/thirdsec.png" alt="Apparel" width={100} height={100} style={{
-                      position: 'absolute', top: '0%', right: '1%',
-                      width: '26vw', maxWidth: '100px', height: 'auto',
+                    <Image src="/mockup-product-hoodie.png" alt="Hoodie" width={90} height={90} style={{
+                      position: 'absolute', top: '5%', right: '2%',
+                      width: '24vw', maxWidth: '90px', height: 'auto',
                       transform: activeMobilePhase === 3 ? 'translateX(0) translateY(0)' : 'translateX(20px) translateY(0)',
-                      objectFit: 'cover', borderRadius: '12px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      objectFit: 'contain', borderRadius: '12px',
                       opacity: activeMobilePhase === 3 ? 1 : 0, zIndex: 4,
                       willChange: 'transform, opacity', transition: 'all 0.5s ease-out', pointerEvents: activeMobilePhase === 3 ? 'auto' : 'none'
-                    }} />
+                    }} unoptimized />
                   </>)}
 
                   {/* Phase 3: Mobile orange card - text only */}
@@ -677,9 +656,9 @@ export default function Home() {
                     transform: `translateY(${(1 - p3Scale) * 20}vh)`,
                     zIndex: 4,
                   }}>
-                    <Image src="/image3.png" alt="Girl in hoodie" width={240} height={160} style={{ position: 'absolute', top: '5%', right: '35%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
-                    <Image src="/image4.png" alt="T-Shirt on rock" width={260} height={180} style={{ position: 'absolute', top: '35%', right: '5%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
-                    <Image src="/thirdsec.png" alt="Guy holding shirt" width={180} height={260} style={{ position: 'absolute', top: '65%', right: '45%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
+                    <Image src="/mockup-hat.png" alt="Hat Mockup" width={210} height={140} style={{ position: 'absolute', top: '2%', right: '35%', objectFit: 'contain', borderRadius: '12px' }} unoptimized />
+                    <Image src="/mockup-man-box.jpg" alt="Man Box Mockup" width={230} height={160} style={{ position: 'absolute', top: '38%', right: '5%', objectFit: 'cover', borderRadius: '12px' }} unoptimized />
+                    <Image src="/mockup-product-hoodie.png" alt="Hoodie Mockup" width={150} height={230} style={{ position: 'absolute', top: '72%', right: '45%', objectFit: 'contain', borderRadius: '12px' }} unoptimized />
                   </div>
                   )}
                 </>

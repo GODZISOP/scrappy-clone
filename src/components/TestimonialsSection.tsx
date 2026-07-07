@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    quote: "Scrappy Apparel Company's uniforms have been a fantastic addition to our team. They're high-quality, comfortable, and durable, keeping us cool in summer. The fit is perfect and the professional design aligns well with our brand.",
+    quote: "Total Printing Solution's uniforms have been a fantastic addition to our team. They're high-quality, comfortable, and durable, keeping us cool in summer. The fit is perfect and the professional design aligns well with our brand.",
     name: "Maynor Gutierrez",
     title: "Owner - Macawsome Heating and Cooling",
     avatar: "https://i.pravatar.cc/150?u=maynor"
   },
   {
-    quote: "We at Park Slope United Soccer Club are very happy customers of Scrappy Apparel. Scrappy and his team have designed, sourced, and produced high quality products at low cost with a very fast turnaround.",
+    quote: "We at Park Slope United Soccer Club are very happy customers of Total Printing Solution. Total Printing Solution and their team have designed, sourced, and produced high quality products at low cost with a very fast turnaround.",
     name: "Nathan Bell",
     title: "Executive Director - Park Slope United Soccer Club",
     avatar: "https://i.pravatar.cc/150?u=nathan"
   },
   {
-    quote: "Working with Scrappy Apparel has been a game changer for our merchandise line. The attention to detail and quality is unmatched. Our customers love the new designs!",
+    quote: "Working with Total Printing Solution has been a game changer for our merchandise line. The attention to detail and quality is unmatched. Our customers love the new designs!",
     name: "Sarah Jenkins",
     title: "Founder - Urban Threads",
     avatar: "https://i.pravatar.cc/150?u=sarah"
@@ -27,7 +27,7 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?u=marcus"
   },
   {
-    quote: "Scrappy Apparel delivers every single time. From screen printing to custom embroidery, they handle it all with true professionalism. Highly recommended!",
+    quote: "Total Printing Solution delivers every single time. From screen printing to custom embroidery, they handle it all with true professionalism. Highly recommended!",
     name: "Emily Chen",
     title: "Creative Director - Studio Blanc",
     avatar: "https://i.pravatar.cc/150?u=emily"

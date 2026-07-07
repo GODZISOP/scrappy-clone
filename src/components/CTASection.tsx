@@ -218,13 +218,13 @@ export default function CTASection() {
       `}</style>
       <div className={`cta-container ${isVisible ? 'visible' : ''}`}>
         {/* Floating Images */}
-        <Image src="/image5.png" alt="Custom apparel" width={200} height={130} className={`floating-img img-top-left ${isVisible ? 'visible' : ''}`} />
-        <Image src="/image1.png" alt="Custom apparel" width={180} height={180} className={`floating-img img-mid-left ${isVisible ? 'visible' : ''}`} />
-        <Image src="/image2.png" alt="Custom apparel" width={150} height={150} className={`floating-img img-bot-left ${isVisible ? 'visible' : ''}`} />
+        <Image src="/image.png" alt="Custom apparel" width={200} height={130} className={`floating-img img-top-left ${isVisible ? 'visible' : ''}`} unoptimized />
+        <Image src="/mockup-bags.png" alt="Custom apparel" width={180} height={180} className={`floating-img img-mid-left ${isVisible ? 'visible' : ''}`} unoptimized />
+        <Image src="/mockup-group.jpg" alt="Custom apparel" width={150} height={150} className={`floating-img img-bot-left ${isVisible ? 'visible' : ''}`} unoptimized />
         
-        <Image src="/image3.png" alt="Custom apparel" width={160} height={160} className={`floating-img img-top-right ${isVisible ? 'visible' : ''}`} />
-        <Image src="/image4.png" alt="Custom apparel" width={220} height={140} className={`floating-img img-mid-right ${isVisible ? 'visible' : ''}`} />
-        <Image src="/thirdsec.png" alt="Custom apparel" width={170} height={170} className={`floating-img img-bot-right ${isVisible ? 'visible' : ''}`} />
+        <Image src="/mockup-cup.png" alt="Custom apparel" width={160} height={160} className={`floating-img img-top-right ${isVisible ? 'visible' : ''}`} unoptimized />
+        <Image src="/mockup-man-box.jpg" alt="Custom apparel" width={220} height={140} className={`floating-img img-mid-right ${isVisible ? 'visible' : ''}`} unoptimized />
+        <Image src="/mockup-hat.png" alt="Custom apparel" width={170} height={170} className={`floating-img img-bot-right ${isVisible ? 'visible' : ''}`} unoptimized />
 
         <div className={`cta-content ${isVisible ? 'visible' : ''}`}>
           <h2 className="cta-heading">
