@@ -103,7 +103,7 @@ export default function Home() {
     <main>
       <header className="header">
         <Link href="/" className="logo-container">
-          <Image src="/logo-transparent.png" alt="Logo" width={40} height={45} style={{ objectFit: 'contain' }} />
+          <Image src="/logo-transparent.png" alt="Logo" width={isMobile ? 32 : 40} height={isMobile ? 36 : 45} style={{ objectFit: 'contain' }} />
           <div className="logo-text-wrapper">
             <span className="logo-main-text">SCRAPPY</span>
             <span className="logo-sub-text">APPAREL COMPANY</span>
@@ -137,8 +137,8 @@ export default function Home() {
         )}
 
         {/* Mobile Menu Overlay */}
-        {isMobile && isMenuOpen && (
-          <div className="mobile-menu-overlay">
+        {isMobile && (
+          <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
             <div className="mobile-menu-header">
               <span className="mobile-menu-title">Menu</span>
               <button className="mobile-menu-close" onClick={() => setIsMenuOpen(false)}>✕</button>
