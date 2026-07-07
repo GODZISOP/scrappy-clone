@@ -504,6 +504,7 @@ export default function Home() {
                     {/* Top center image */}
                     <Image src="/image5.png" alt="Apparel" width={130} height={95} style={{
                       position: 'absolute', top: '-15%', left: '50%',
+                      width: '32vw', maxWidth: '130px', height: 'auto',
                       transform: activeMobilePhase === 2 ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-20px)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
@@ -513,6 +514,7 @@ export default function Home() {
                     {/* Left image */}
                     <Image src="/image1.png" alt="Apparel" width={100} height={110} style={{
                       position: 'absolute', top: '0%', left: '1%',
+                      width: '26vw', maxWidth: '100px', height: 'auto',
                       transform: activeMobilePhase === 2 ? 'translateX(0) translateY(0)' : 'translateX(-20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
@@ -522,6 +524,7 @@ export default function Home() {
                     {/* Right image */}
                     <Image src="/image2.png" alt="Apparel" width={100} height={100} style={{
                       position: 'absolute', top: '0%', right: '1%',
+                      width: '26vw', maxWidth: '100px', height: 'auto',
                       transform: activeMobilePhase === 2 ? 'translateX(0) translateY(0)' : 'translateX(20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
@@ -609,6 +612,7 @@ export default function Home() {
                     {/* Top center image */}
                     <Image src="/image3.png" alt="Apparel" width={130} height={95} style={{
                       position: 'absolute', top: '-15%', left: '50%',
+                      width: '32vw', maxWidth: '130px', height: 'auto',
                       transform: activeMobilePhase === 3 ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-20px)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
@@ -618,6 +622,7 @@ export default function Home() {
                     {/* Left image */}
                     <Image src="/image4.png" alt="Apparel" width={100} height={110} style={{
                       position: 'absolute', top: '0%', left: '1%',
+                      width: '26vw', maxWidth: '100px', height: 'auto',
                       transform: activeMobilePhase === 3 ? 'translateX(0) translateY(0)' : 'translateX(-20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
@@ -627,6 +632,7 @@ export default function Home() {
                     {/* Right image */}
                     <Image src="/thirdsec.png" alt="Apparel" width={100} height={100} style={{
                       position: 'absolute', top: '0%', right: '1%',
+                      width: '26vw', maxWidth: '100px', height: 'auto',
                       transform: activeMobilePhase === 3 ? 'translateX(0) translateY(0)' : 'translateX(20px) translateY(0)',
                       objectFit: 'cover', borderRadius: '12px',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.18)',

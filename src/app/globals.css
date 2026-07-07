@@ -17,9 +17,11 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--dark-grey);
   background-color: var(--light-bg);
+  overflow-x: clip;
 }
 
 html {
+  overflow-x: clip;
 }
 
 /* Header Styles */
@@ -939,13 +941,13 @@ html {
   /* Override inline heading font size on mobile */
   .sec7-sticky [style*="fontSize: '3.5rem'"],
   .sec7-sticky h2 {
-    font-size: 1.8rem !important;
+    font-size: clamp(1.4rem, 6vw, 2.2rem) !important;
     line-height: 1.2 !important;
     padding: 0 1rem;
     width: 100% !important;
   }
   .sec7-sticky p {
-    font-size: 0.85rem !important;
+    font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
     padding: 0 1rem;
   }
   .sec7-scene {
