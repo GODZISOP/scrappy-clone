@@ -137,11 +137,37 @@ export default function TestimonialsSection() {
           background-color: #f18c00;
         }
         @media (max-width: 768px) {
+          .testimonials-section {
+            padding: 60px 15px;
+          }
+          .testimonials-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+          }
           .testimonials-track {
             --slide-percent: 100%;
+            transform: none !important;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            padding-bottom: 20px;
+          }
+          .testimonials-track::-webkit-scrollbar {
+            display: none;
           }
           .testimonial-card-wrapper {
-            flex: 0 0 100%;
+            flex: 0 0 85%;
+            scroll-snap-align: center;
+          }
+          .testimonial-card {
+            padding: 30px 20px;
+          }
+          .testimonial-quote {
+            font-size: 1rem;
+          }
+          .testimonials-dots {
+            display: none; /* Hide dots since it's native scroll */
           }
         }
       `}</style>

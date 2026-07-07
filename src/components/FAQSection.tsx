@@ -109,6 +109,18 @@ export default function FAQSection() {
           line-height: 1.6;
           margin: 0;
         }
+        @media (max-width: 768px) {
+          .faq-section {
+            padding: 60px 20px 80px 20px;
+          }
+          .faq-main-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+          }
+          .faq-question-text {
+            font-size: 1.1rem;
+          }
+        }
       `}</style>
 
       <div className="faq-container">

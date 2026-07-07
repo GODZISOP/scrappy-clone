@@ -75,13 +75,21 @@ export default function Footer() {
           color: #ffffff;
         }
         @media (max-width: 768px) {
+          .footer-wrapper {
+            padding-top: 40px;
+          }
+          .footer-content {
+            padding: 0 20px;
+          }
           .footer-columns {
             grid-template-columns: 1fr;
+            gap: 30px;
           }
           .footer-bottom {
             flex-direction: column;
             gap: 20px;
             text-align: center;
+            padding: 20px;
           }
         }
       `}</style>

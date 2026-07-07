@@ -14,6 +14,14 @@ export default function Home() {
 
   const sec7Ref = useRef<HTMLElement>(null);
   const [sec7Progress, setSec7Progress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -287,11 +295,22 @@ export default function Home() {
               <Link href="#" className="btn-white-ps">View Products</Link>
             </div>
             <div className="ps-images ps-images-products">
-              {/* Using absolute positioning in CSS for these overlapping items */}
-              <Image src="/Sec5image1.png" alt="Apparel 1" width={250} height={300} className="prod-img img-center" style={{ objectFit: 'contain' }} />
-              <Image src="/sec5image2.png" alt="Apparel 2" width={220} height={280} className="prod-img img-left" style={{ objectFit: 'contain' }} />
-              <Image src="/sec5image3.png" alt="Apparel 3" width={220} height={280} className="prod-img img-right" style={{ objectFit: 'contain' }} />
-              <Image src="/sec5image4.png" alt="Apparel Hat" width={120} height={100} className="prod-img img-hat" style={{ objectFit: 'contain' }} />
+              <div className="prod-item img-center">
+                <Image src="/Sec5image1.png" alt="Hoodies" width={250} height={300} className="prod-img" style={{ objectFit: 'contain' }} />
+                <span className="prod-label">Hoodies</span>
+              </div>
+              <div className="prod-item img-left">
+                <Image src="/sec5image2.png" alt="Polo T-Shirt" width={220} height={280} className="prod-img" style={{ objectFit: 'contain' }} />
+                <span className="prod-label">Polo T-Shirt</span>
+              </div>
+              <div className="prod-item img-right">
+                <Image src="/sec5image3.png" alt="T-Shirts" width={220} height={280} className="prod-img" style={{ objectFit: 'contain' }} />
+                <span className="prod-label">T-Shirts</span>
+              </div>
+              <div className="prod-item img-hat">
+                <Image src="/sec5image4.png" alt="Hats" width={120} height={100} className="prod-img" style={{ objectFit: 'contain' }} />
+                <span className="prod-label">Hats</span>
+              </div>
             </div>
           </div>
 
@@ -375,19 +394,21 @@ export default function Home() {
           
           <div className="sec7-heading" style={{
             position: 'absolute',
-            top: '10%',
+            top: isMobile ? '5%' : '10%',
             left: '50%',
             width: '100%',
             textAlign: 'center',
-            opacity: Math.max(0, 1 - sec7Progress * 4), // fades out very early
+            opacity: Math.max(0, 1 - sec7Progress * 4),
             transform: `translate(-50%, ${-sec7Progress * 150}px)`,
             zIndex: 10,
+            padding: '0 1.5rem',
+            boxSizing: 'border-box',
           }}>
-            <h2 style={{ fontSize: '3.5rem', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1, marginBottom: '1rem' }}>
-              We Redefine the Bulk<br/>T-Shirt Printing Experience
+            <h2 style={{ fontSize: isMobile ? '1.8rem' : '3.5rem', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.2, marginBottom: isMobile ? '0.5rem' : '1rem' }}>
+              We Redefine the Bulk{isMobile ? ' ' : <br/>}T-Shirt Printing Experience
             </h2>
-            <p style={{ fontSize: '1.1rem', color: '#4b5563', lineHeight: 1.5 }}>
-              We've transformed the bulk printing process into<br/>
+            <p style={{ fontSize: isMobile ? '0.85rem' : '1.1rem', color: '#4b5563', lineHeight: 1.5 }}>
+              We've transformed the bulk printing process into{isMobile ? ' ' : <br/>}
               a scalable solution that delivers next-level quality and value.
             </p>
           </div>
@@ -396,8 +417,8 @@ export default function Home() {
             position: 'absolute',
             width: '100%',
             maxWidth: '1200px',
-            height: '70%', // leaves top 30% for heading
-            top: '30%',
+            height: isMobile ? '75%' : '70%',
+            top: isMobile ? '25%' : '30%',
             left: '50%',
             transform: 'translateX(-50%)',
             display: 'flex',
@@ -405,15 +426,16 @@ export default function Home() {
             justifyContent: 'center',
           }}>
             
-            {/* The main polo shirt - stays in center! */}
+                      {/* The main polo shirt - stays in center! */}
             <div className="sec7-main-image" style={{
               position: 'absolute',
-              zIndex: 5,
-              top: '50%',
+              zIndex: isMobile ? 10 : 5,
+              top: isMobile ? '18%' : '50%',
               left: '50%',
-              transform: 'translate(-50%, -50%)',
+              transform: isMobile ? 'translateX(-50%)' : 'translate(-50%, -50%)',
+              maxWidth: isMobile ? '65vw' : 'none',
             }}>
-              <Image src="/sec7mainimage1.png" alt="Polo Shirt" width={380} height={480} style={{ objectFit: 'contain' }} />
+              <Image src="/sec7mainimage1.png" alt="Polo Shirt" width={isMobile ? 190 : 380} height={isMobile ? 240 : 480} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }} />
             </div>
 
             {/* Calculations for sliding progress */}
@@ -423,14 +445,14 @@ export default function Home() {
 
               return (
                 <>
-                  {/* Phase 2: Left Images */}
+                  {/* Phase 2: Left Images - desktop only */}
+                  {!isMobile && (
                   <div className="sec7-phase2-left-images" style={{
                     position: 'absolute',
                     left: 0,
                     width: '40%',
                     height: '100%',
                     opacity: p2Scale,
-                    // Moves to the left as it fades out/in
                     transform: `translateX(${(1 - p2Scale) * -20}vw)`,
                     zIndex: 4,
                   }}>
@@ -438,12 +460,66 @@ export default function Home() {
                     <Image src="/image1.png" alt="T-Shirt" width={260} height={180} style={{ position: 'absolute', top: '35%', left: '5%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
                     <Image src="/image2.png" alt="Guy with backpack" width={180} height={260} style={{ position: 'absolute', top: '65%', left: '45%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
                   </div>
+                  )}
 
-                  {/* Phase 2: Right Orange Box (Slides out from behind shirt to the right) */}
+                  {/* Phase 2: Mobile - 3 floating images around the shirt */}
+                  {isMobile && (<>
+                    {/* Top center image */}
+                    <Image src="/image5.png" alt="Apparel" width={130} height={95} style={{
+                      position: 'absolute', top: '-2%', left: '50%',
+                      transform: `translateX(-50%) translateY(${(1 - p2Scale) * -40}px)`,
+                      objectFit: 'cover', borderRadius: '12px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      opacity: p2Scale, zIndex: 4,
+                    }} />
+                    {/* Left image */}
+                    <Image src="/image1.png" alt="Apparel" width={100} height={110} style={{
+                      position: 'absolute', top: '4%', left: '1%',
+                      transform: `translateX(${(1 - p2Scale) * -40}px)`,
+                      objectFit: 'cover', borderRadius: '12px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      opacity: p2Scale, zIndex: 4,
+                    }} />
+                    {/* Right image */}
+                    <Image src="/image2.png" alt="Apparel" width={100} height={100} style={{
+                      position: 'absolute', top: '4%', right: '1%',
+                      transform: `translateX(${(1 - p2Scale) * 40}px)`,
+                      objectFit: 'cover', borderRadius: '12px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      opacity: p2Scale, zIndex: 4,
+                    }} />
+                  </>)}
+
+                  {/* Phase 2: Mobile orange card - text only */}
+                  {isMobile && (
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '0%',
+                    left: '0%',
+                    width: '100%',
+                    backgroundColor: '#f18c00',
+                    borderRadius: '30px 30px 0 0',
+                    padding: '2.5rem 1.5rem 2rem',
+                    paddingTop: '14rem',
+                    zIndex: 7,
+                    opacity: p2Scale,
+                    color: '#fff',
+                    textAlign: 'center',
+                    transform: `translateY(${(1 - p2Scale) * 80}px)`,
+                  }}>
+                    <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.75rem' }}>End-to-End Oversight</h3>
+                    <p style={{ fontSize: '0.9rem', lineHeight: 1.6, opacity: 0.95 }}>
+                      Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Scrappy, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
+                    </p>
+                  </div>
+                  )}
+
+                  {/* Phase 2: Right Orange Box - desktop only */}
+                  {!isMobile && (
                   <div className="sec7-phase2-right-box" style={{
                     position: 'absolute',
-                    left: '50%', // Start from center behind the shirt
-                    width: `${p2Scale * 45}%`, // Expands to the right
+                    left: '50%',
+                    width: `${p2Scale * 45}%`,
                     height: '280px',
                     backgroundColor: '#f18c00',
                     borderTopRightRadius: '80px',
@@ -453,7 +529,6 @@ export default function Home() {
                     alignItems: 'center',
                     overflow: 'hidden',
                   }}>
-                    {/* The content inside needs a fixed min-width so it doesn't squish while expanding */}
                     <div style={{ width: '560px', minWidth: '560px', paddingLeft: '220px', paddingRight: '40px', color: '#ffffff', boxSizing: 'border-box' }}>
                       <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.8rem' }}>End-to-End Oversight</h3>
                       <p style={{ fontSize: '0.95rem', lineHeight: 1.5, opacity: 0.95 }}>
@@ -461,12 +536,14 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
+                  )}
 
-                  {/* Phase 3: Left Orange Box (Slides out from behind shirt to the left) */}
+                  {/* Phase 3: Left Orange Box - desktop only */}
+                  {!isMobile && (
                   <div className="sec7-phase3-left-box" style={{
                     position: 'absolute',
-                    right: '50%', // Start from center behind the shirt
-                    width: `${p3Scale * 45}%`, // Expands to the left
+                    right: '50%',
+                    width: `${p3Scale * 45}%`,
                     height: '280px',
                     backgroundColor: '#f18c00',
                     borderTopLeftRadius: '80px',
@@ -484,15 +561,68 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
+                  )}
 
-                  {/* Phase 3: Right Images */}
+                  {/* Phase 3: Mobile - 3 floating images around the shirt */}
+                  {isMobile && (<>
+                    {/* Top center image */}
+                    <Image src="/image3.png" alt="Apparel" width={130} height={95} style={{
+                      position: 'absolute', top: '-2%', left: '50%',
+                      transform: `translateX(-50%) translateY(${(1 - p3Scale) * -40}px)`,
+                      objectFit: 'cover', borderRadius: '12px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      opacity: p3Scale, zIndex: 4,
+                    }} />
+                    {/* Left image */}
+                    <Image src="/image4.png" alt="Apparel" width={100} height={110} style={{
+                      position: 'absolute', top: '4%', left: '1%',
+                      transform: `translateX(${(1 - p3Scale) * -40}px)`,
+                      objectFit: 'cover', borderRadius: '12px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      opacity: p3Scale, zIndex: 4,
+                    }} />
+                    {/* Right image */}
+                    <Image src="/thirdsec.png" alt="Apparel" width={100} height={100} style={{
+                      position: 'absolute', top: '4%', right: '1%',
+                      transform: `translateX(${(1 - p3Scale) * 40}px)`,
+                      objectFit: 'cover', borderRadius: '12px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
+                      opacity: p3Scale, zIndex: 4,
+                    }} />
+                  </>)}
+
+                  {/* Phase 3: Mobile orange card - text only */}
+                  {isMobile && (
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '0%',
+                    left: '0%',
+                    width: '100%',
+                    backgroundColor: '#f18c00',
+                    borderRadius: '30px 30px 0 0',
+                    padding: '2.5rem 1.5rem 2rem',
+                    paddingTop: '14rem',
+                    zIndex: 7,
+                    opacity: p3Scale,
+                    color: '#fff',
+                    textAlign: 'center',
+                    transform: `translateY(${(1 - p3Scale) * 80}px)`,
+                  }}>
+                    <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.75rem' }}>Timely Delivery</h3>
+                    <p style={{ fontSize: '0.9rem', lineHeight: 1.6, opacity: 0.95 }}>
+                      Brands that break promises don't last long in this industry. That's why we guarantee on-time delivery for all orders, big or small. Our nationwide supply chain offers lightning-fast fulfillment to keep your customers happy.
+                    </p>
+                  </div>
+                  )}
+
+                  {/* Phase 3: Right Images - desktop only */}
+                  {!isMobile && (
                   <div className="sec7-phase3-right-images" style={{
                     position: 'absolute',
                     right: 0,
                     width: '40%',
                     height: '100%',
                     opacity: p3Scale,
-                    // Comes up from the bottom!
                     transform: `translateY(${(1 - p3Scale) * 20}vh)`,
                     zIndex: 4,
                   }}>
@@ -500,6 +630,7 @@ export default function Home() {
                     <Image src="/image4.png" alt="T-Shirt on rock" width={260} height={180} style={{ position: 'absolute', top: '35%', right: '5%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
                     <Image src="/thirdsec.png" alt="Guy holding shirt" width={180} height={260} style={{ position: 'absolute', top: '65%', right: '45%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
                   </div>
+                  )}
                 </>
               );
             })()}

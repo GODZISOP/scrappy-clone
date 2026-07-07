@@ -178,6 +178,20 @@ export default function CTASection() {
         @media (max-width: 768px) {
           .cta-heading { font-size: 2.5rem; }
           .floating-img { display: none; }
+          .cta-buttons {
+            flex-direction: column;
+            gap: 15px;
+          }
+          .cta-btn-primary, .cta-btn-secondary {
+            width: 100%;
+          }
+          .mascot-peek-container {
+            right: 5% !important;
+            transform: scale(0.8) translateY(-50px) !important;
+          }
+          .mascot-peek-container.visible {
+            transform: scale(0.8) translateY(0) !important;
+          }
         }
       `}</style>
       <div className={`cta-container ${isVisible ? 'visible' : ''}`}>
