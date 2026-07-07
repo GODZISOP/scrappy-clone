@@ -95,8 +95,12 @@ export default function Footer() {
       `}</style>
 
       <div className="footer-content">
-        <div className="footer-top">
-          <Image src="/man-logo.jpg" alt="Total Printing Solution" width={200} height={60} style={{ objectFit: 'contain' }} unoptimized />
+        <div className="footer-top" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Image src="/man-logo.jpg" alt="Total Printing Solution" width={60} height={60} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <span style={{ fontSize: '20px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>TOTAL PRINTING</span>
+            <span style={{ fontSize: '15px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>SOLUTION</span>
+          </div>
         </div>
 
         <div className="footer-columns">

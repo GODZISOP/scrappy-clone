@@ -239,22 +239,7 @@ export default function CTASection() {
         </div>
       </div>
       
-      {/* Upside-down mascot peeking from the bottom */}
-      <div className={`mascot-peek-container ${isVisible ? 'visible' : ''}`} style={{
-        position: 'absolute',
-        top: 'calc(100% - 80px)', 
-        right: '15%',
-        zIndex: 1, 
-        pointerEvents: 'none'
-      }}>
-        <Image 
-          src="/mascot-peek-custom.png" 
-          alt="Mascot peeking" 
-          width={250} 
-          height={250} 
-          style={{ objectFit: 'contain' }}
-        />
-      </div>
+
     </section>
   );
 }
