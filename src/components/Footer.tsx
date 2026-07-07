@@ -98,8 +98,8 @@ export default function Footer() {
         <div className="footer-top" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Image src="/man-logo.jpg" alt="Total Printing Solution" width={60} height={60} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <span style={{ fontSize: '20px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>TOTAL PRINTING</span>
-            <span style={{ fontSize: '15px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>SOLUTION</span>
+            <span style={{ fontSize: '20px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>M.A.N</span>
+            <span style={{ fontSize: '15px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>Custom wear</span>
           </div>
         </div>
 
@@ -163,7 +163,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div className="footer-bottom-text">Designed &amp; Developed &ndash; <span className="leo9">Leo9Studio</span></div>
+        <div className="footer-bottom-text">Designed &amp; Developed &ndash; <span className="leo9">zain shabbi</span></div>
       </div>
     </footer>
   );

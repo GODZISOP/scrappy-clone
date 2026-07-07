@@ -105,8 +105,8 @@ export default function Home() {
         <Link href="/" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
           <Image src="/man-logo.jpg" alt="Total Printing Solution Logo" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <span style={{ fontSize: isMobile ? '13px' : '16px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>TOTAL PRINTING</span>
-            <span style={{ fontSize: isMobile ? '11px' : '13px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>SOLUTION</span>
+            <span style={{ fontSize: isMobile ? '16px' : '18px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>M.A.N</span>
+            <span style={{ fontSize: isMobile ? '11px' : '13px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>Custom wear</span>
           </div>
         </Link>
 
@@ -330,7 +330,7 @@ export default function Home() {
               <Link href="#" className="btn-white-ps">View Products</Link>
             </div>
             <div className="ps-images ps-images-products" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
-              <Image src="/mockup-product-hoodie.png" alt="Hoodie" width={380} height={400} style={{ objectFit: 'contain', objectPosition: 'bottom', transform: 'translateY(20px)' }} unoptimized />
+              <Image src="/mockup-product-hoodie.png" alt="Hoodie" width={380} height={440} style={{ objectFit: 'contain', objectPosition: 'bottom', transform: 'translateY(100px)' }} unoptimized />
             </div>
           </div>
 
@@ -517,7 +517,7 @@ export default function Home() {
                     }} unoptimized />
                   </>)}
 
-                   {/* Unified Mobile orange card - Box stays same, text changes */}
+                  {/* Unified Mobile orange card - Box stays same, text changes */}
                   {isMobile && (
                     <div style={{
                       position: 'absolute',
