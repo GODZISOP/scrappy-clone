@@ -176,14 +176,29 @@ export default function CTASection() {
           transform: translateY(0);
         }
         @media (max-width: 768px) {
-          .cta-heading { font-size: 2.5rem; }
-          .floating-img { display: none; }
+          .cta-heading { font-size: clamp(1.6rem, 7vw, 2.2rem); margin-bottom: 30px; }
+          
+          /* Scale down and reposition images for mobile exactly like the screenshot */
+          .img-top-left { width: 26vw; height: auto; top: 5%; left: -5%; transform: translate(20px, 20px); z-index: 2; }
+          .img-top-right { width: 22vw; height: auto; top: 2%; left: 40%; transform: translate(0, 20px); z-index: 1; }
+          .img-mid-right { width: 35vw; height: auto; top: 15%; right: -5%; transform: translate(-20px, 0); z-index: 2; }
+          .img-mid-left { width: 24vw; height: auto; bottom: 20%; left: 2%; top: auto; transform: translate(20px, -20px); z-index: 2; }
+          .img-bot-right { width: 24vw; height: auto; bottom: 20%; right: 5%; transform: translate(-20px, -20px); z-index: 2; }
+          .img-bot-left { width: 35vw; height: auto; bottom: -5%; left: 35%; transform: translate(0, -20px); z-index: 3; }
+
           .cta-buttons {
-            flex-direction: column;
-            gap: 15px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 10;
           }
           .cta-btn-primary, .cta-btn-secondary {
-            width: 100%;
+            width: auto;
+            flex: 1;
+            padding: 12px 10px;
+            font-size: 1rem;
           }
           .mascot-peek-container {
             right: 5% !important;
