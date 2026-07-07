@@ -17,11 +17,9 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--dark-grey);
   background-color: var(--light-bg);
-  overflow-x: clip;
 }
 
 html {
-  overflow-x: clip;
 }
 
 /* Header Styles */
@@ -930,7 +928,7 @@ html {
 
   /* Sec7 - Mobile layout handled in JSX, just ensure sticky works */
   .sec7-wrapper {
-    height: 150vh !important;
+    height: 250vh !important;
   }
   .sec7-sticky {
     position: sticky !important;
