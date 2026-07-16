@@ -228,9 +228,9 @@ export default function CTASection() {
 
         <div className={`cta-content ${isVisible ? 'visible' : ''}`}>
           <h2 className="cta-heading">
-            Define your style with<br/>
-            custom apparel created<br/>
-            exclusively for you.
+            Bring your brand to life with<br/>
+            custom printing &amp; design<br/>
+            created exclusively for you.
           </h2>
           <div className="cta-buttons">
             <button className="cta-btn-primary">Let&apos;s Talk</button>

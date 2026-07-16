@@ -96,7 +96,7 @@ export default function Footer() {
 
       <div className="footer-content">
         <div className="footer-top" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Image src="/man-logo.jpg" alt="Total Printing Solution" width={60} height={60} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
+          <Image src="/man-logo.jpg" alt="M.A.N Custom wear" width={60} height={60} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <span style={{ fontSize: '20px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>M.A.N</span>
             <span style={{ fontSize: '15px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>Custom wear</span>
@@ -118,28 +118,27 @@ export default function Footer() {
           
           <div className="footer-column">
             <h4 className="footer-column-title">Products</h4>
-            <Link href="#" className="footer-link">T-Shirts</Link>
-            <Link href="#" className="footer-link">Long Sleeves</Link>
-            <Link href="#" className="footer-link">Polos</Link>
-            <Link href="#" className="footer-link">Sweatshirts</Link>
-            <Link href="#" className="footer-link">Hoodies</Link>
-            <Link href="#" className="footer-link">Zip Ups</Link>
-            <Link href="#" className="footer-link">Pants &amp; Shorts</Link>
-            <Link href="#" className="footer-link">Hats</Link>
+            <Link href="#" className="footer-link">Vinyl Lettering</Link>
+            <Link href="#" className="footer-link">Embroidery</Link>
+            <Link href="#" className="footer-link">Digital Printing</Link>
+            <Link href="#" className="footer-link">Promotional Materials</Link>
+            <Link href="#" className="footer-link">Consumer Products</Link>
+            <Link href="#" className="footer-link">T-Shirts &amp; Apparel</Link>
           </div>
 
           <div className="footer-column">
             <h4 className="footer-column-title">Solutions</h4>
-            <Link href="#" className="footer-link">Apparel Manufacturing</Link>
-            <Link href="#" className="footer-link">Fulfillment Solutions</Link>
             <Link href="#" className="footer-link">Design Services</Link>
-            <Link href="#" className="footer-link">Agency Partners</Link>
+            <Link href="#" className="footer-link">Graphic Design</Link>
+            <Link href="#" className="footer-link">3D Design &amp; Animations</Link>
+            <Link href="#" className="footer-link">Custom Signage</Link>
+            <Link href="#" className="footer-link" style={{ fontWeight: 800, color: '#f18c00' }}>Call: (215) 651-8932</Link>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <div className="footer-bottom-text">2026 All Rights Reserved &ndash; Total Printing Solution</div>
+        <div className="footer-bottom-text">2026 All Rights Reserved &ndash; M.A.N Custom wear</div>
         
         <div className="social-icons">
           <Link href="#" className="social-icon" aria-label="Facebook">

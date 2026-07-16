@@ -58,40 +58,40 @@ export default function Home() {
 
   const solutions = [
     {
-      header: "Get Uniforms for My Team",
+      header: "Vinyl Lettering",
       image: "/mockup-hat.png",
-      title: "Uniform Systems for ",
-      titleBold: "Growing Teams",
-      desc: "Sublimated uniforms, polos, hats, and apparel systems built for consistency across teams, locations, and repeat orders",
+      title: "Custom Signage & ",
+      titleBold: "Car Wraps",
+      desc: "High-quality vinyl lettering for signage, decals, t-shirts, and car wraps. No order is too small for us to handle.",
     },
     {
-      header: "Print Merch or Apparel",
+      header: "Embroidery",
       image: "/mockup-bags.png",
-      title: "Premium Screen Printing & ",
-      titleBold: "Merch Programs",
-      desc: "High-quality screen printing, oversized graphics, specialty inks, and merch programs designed for brands, events, and seasonal drops.",
+      title: "Premium Embroidery for ",
+      titleBold: "Apparel",
+      desc: "Custom embroidery services for t-shirts, hats, jackets, and accessories with precise detailing.",
     },
     {
-      header: "Total Printing Solution Color System",
+      header: "Digital Printing",
       image: "/mockup-man-box.jpg",
       title: "",
-      titleBold: "Pantone-Matched ",
-      titleSuffix: "Garments",
-      desc: "Premium weight garments with controlled dye processes and specialty washes designed to match your brand's Pantone colors. Built for scalable collections",
+      titleBold: "High-Quality ",
+      titleSuffix: "Digital Prints",
+      desc: "Color stickers, lawn signs, postcards, posters, brochures, labels, canvas prints, flyers, and much more.",
     },
     {
-      header: "Partner as a Design Agency",
+      header: "Design Services",
       image: "/mockup-group.jpg",
-      title: "Production Systems for ",
-      titleBold: "Design Agencies",
-      desc: "A sublimation-first apparel production partner supporting agency-led client work with reliable manufacturing and technical execution",
+      title: "Professional Design & ",
+      titleBold: "Illustrations",
+      desc: "Logos, 3D design, graphic design, animations, layouts, and even tractor trailer canvas repair.",
     },
     {
-      header: "Fulfillment Orders & Inventory",
+      header: "Promotional & Consumer Products",
       image: "/mockup-box.png",
-      title: "Uniform & Merch ",
-      titleBold: "Fulfillment Solutions",
-      desc: "Inventory storage, pick-pack-ship, merch drops, and uniform restocks managed through Total Printing Solution's 3PL MGMT platform.",
+      title: "Customizable ",
+      titleBold: "Specialty Items",
+      desc: "Business necessities, marketing materials, and advertising items fitting all your business needs.",
     }
   ];
 
@@ -103,7 +103,7 @@ export default function Home() {
     <main>
       <header className="header">
         <Link href="/" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
-          <Image src="/man-logo.jpg" alt="Total Printing Solution Logo" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
+          <Image src="/man-logo.jpg" alt="M.A.N Custom wear Logo" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} style={{ objectFit: 'contain', borderRadius: '4px' }} unoptimized />
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <span style={{ fontSize: isMobile ? '16px' : '18px', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.1 }}>M.A.N</span>
             <span style={{ fontSize: isMobile ? '11px' : '13px', fontWeight: 700, color: '#555', letterSpacing: '1px' }}>Custom wear</span>
@@ -113,12 +113,12 @@ export default function Home() {
         {!isMobile && (
           <>
             <nav className="nav-links">
-              <Link href="#" className="nav-link">Solutions <span className="nav-dot"></span></Link>
-              <Link href="#" className="nav-link">Products <span className="nav-dot"></span></Link>
-              <Link href="#" className="nav-link">Industries <span className="nav-dot"></span></Link>
-              <Link href="#" className="nav-link">Pricing <span className="nav-dot"></span></Link>
-              <Link href="#" className="nav-link">About Us</Link>
-              <Link href="#" className="nav-link">Resources <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Digital Printing <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Vinyl Lettering <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Embroidery <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Design Services <span className="nav-dot"></span></Link>
+              <Link href="#" className="nav-link">Promotional</Link>
+              <Link href="#" className="nav-link">Contact Us <span className="nav-dot"></span></Link>
             </nav>
 
             <div className="header-actions">
@@ -145,12 +145,12 @@ export default function Home() {
             </div>
 
             <nav className="mobile-nav-links">
-              <Link href="#" className="mobile-nav-link">Solutions <span className="arrow">›</span></Link>
-              <Link href="#" className="mobile-nav-link">Products <span className="arrow">›</span></Link>
-              <Link href="#" className="mobile-nav-link">Industries <span className="arrow">›</span></Link>
-              <Link href="#" className="mobile-nav-link">Pricing <span className="arrow">›</span></Link>
-              <Link href="#" className="mobile-nav-link">About Us</Link>
-              <Link href="#" className="mobile-nav-link">Resources <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Digital Printing <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Vinyl Lettering <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Embroidery <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Design Services <span className="arrow">›</span></Link>
+              <Link href="#" className="mobile-nav-link">Promotional</Link>
+              <Link href="#" className="mobile-nav-link">Contact Us <span className="arrow">›</span></Link>
             </nav>
 
             <div className="mobile-menu-actions">
@@ -163,9 +163,9 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">Sublimation-First<br />Apparel<br />Manufacturing</h1>
+          <h1 className="hero-title">Premium Printing<br />& Custom Design<br />Services</h1>
           <p className="hero-description">
-            Brand-driven custom apparel programs built for exact color matching, custom color development, uniform systems, and repeatable production.
+            No orders too small! From vinyl lettering and embroidery to full-scale digital printing, promotional materials, and consumer products. Call Today! (215) 651-8932.
           </p>
         </div>
         <div className="hero-image-container">
@@ -276,10 +276,10 @@ export default function Home() {
                 <Image src="/sec4image1.png" alt="Quality Apparel" width={80} height={80} style={{ objectFit: 'contain' }} />
               </div>
               <div className="pill-title-container">
-                Quality Apparel<br />with More Options
+                No Orders<br />Too Small!
               </div>
               <div className="pill-desc-container" style={{ opacity: expandProgress }}>
-                Choose from retail-quality t-shirts, hoodies, polos, and more — with specialty inks and a wide range of fabrics, including upscale options most local print shops don't carry.
+                Whether you need a single custom t-shirt or bulk promotional materials for your business, we handle every order with the same premium quality and dedication.
               </div>
             </div>
 
@@ -292,10 +292,10 @@ export default function Home() {
                 <Image src="/sec4image2.png" alt="Full-Service Partner" width={80} height={80} style={{ objectFit: 'contain' }} />
               </div>
               <div className="pill-title-container">
-                A True Full-<br />Service Apparel<br />Partner
+                A True Full-<br />Service Printing<br />Partner
               </div>
               <div className="pill-desc-container" style={{ opacity: expandProgress }}>
-                Total Printing Solution does more than print t-shirts — we're your full-service apparel partner. We take care of everything from sourcing and printing to shipping, so you can focus on growing your brand.
+                We do more than print — we offer comprehensive design services, digital printing, embroidery, vinyl lettering, and promotional consumer products all in one place.
               </div>
             </div>
 
@@ -308,10 +308,10 @@ export default function Home() {
                 <Image src="/sec4image3.png" alt="Production Growth" width={80} height={80} style={{ objectFit: 'contain' }} />
               </div>
               <div className="pill-title-container">
-                Production That<br />Grows with Your<br />Brand
+                Digital Printing<br />& Design<br />Excellence
               </div>
               <div className="pill-desc-container" style={{ opacity: expandProgress }}>
-                As your business grows, our supply chain and production systems grow with it — giving you reliable quality and fast turnaround every step of the way.
+                From color stickers, lawn signs, and canvas prints to 3D design and animations, our capabilities ensure your brand stands out everywhere.
               </div>
             </div>
 
@@ -326,7 +326,7 @@ export default function Home() {
           <div className="ps-card card-orange">
             <div className="ps-content">
               <h2>Products</h2>
-              <p>Browse our selection of premium apparel, printed to<br />perfection and delivered retail-ready.</p>
+              <p>Browse our consumer products, promotional materials,<br />and premium apparel ready for your brand.</p>
               <Link href="#" className="btn-white-ps">View Products</Link>
             </div>
             <div className="ps-images ps-images-products" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
@@ -338,7 +338,7 @@ export default function Home() {
           <div className="ps-card card-dark">
             <div className="ps-content">
               <h2>Solutions</h2>
-              <p>Discover our custom apparel and fulfillment solutions,<br />designed to help you scale to new heights.</p>
+              <p>Discover our design, digital printing, and lettering<br />solutions tailored to fit your business needs.</p>
               <Link href="#" className="btn-white-ps">View Solutions</Link>
             </div>
             <div className="ps-images ps-images-solutions">
@@ -351,10 +351,10 @@ export default function Home() {
       <section className="dominate-section">
         <div className="dominate-container">
           <div className="dominate-left">
-            <h2 className="dominate-title">Dominate the<br />Market with<br />Total Printing Solution</h2>
+            <h2 className="dominate-title">Grow Your<br />Brand with<br />Premium Services</h2>
             <p className="dominate-desc">
-              Our Brand Building Process (BBP) takes you from pricing to<br />
-              production with retail-level quality, service, and speed.
+              From 3D design and digital printing to vinyl lettering<br />
+              and embroidery, we deliver with unmatched speed.
             </p>
             <div className="dominate-actions">
               <Link href="#" className="btn btn-yellow">Let's Talk</Link>
@@ -425,11 +425,11 @@ export default function Home() {
             boxSizing: 'border-box',
           }}>
             <h2 style={{ fontSize: isMobile ? '1.8rem' : '3.5rem', fontWeight: 900, color: '#1a1a1a', lineHeight: 1.2, marginBottom: isMobile ? '0.5rem' : '1rem' }}>
-              We Redefine the Bulk{isMobile ? ' ' : <br />}T-Shirt Printing Experience
+              We Redefine the Custom{isMobile ? ' ' : <br />}Printing Experience
             </h2>
             <p style={{ fontSize: isMobile ? '0.85rem' : '1.1rem', color: '#4b5563', lineHeight: 1.5 }}>
-              We've transformed the bulk printing process into{isMobile ? ' ' : <br />}
-              a scalable solution that delivers next-level quality and value.
+              We've transformed custom printing and design into{isMobile ? ' ' : <br />}
+              a seamless solution for orders of any size.
             </p>
           </div>
 
@@ -549,7 +549,7 @@ export default function Home() {
                       }}>
                         <h3 style={{ fontSize: 'clamp(1.1rem, 5vw, 1.3rem)', fontWeight: 800, marginBottom: '0.75rem', wordBreak: 'break-word' }}>End-to-End Oversight</h3>
                         <p style={{ fontSize: 'clamp(0.8rem, 4vw, 0.95rem)', lineHeight: 1.6, opacity: 0.95 }}>
-                          Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Total Printing Solution, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
+                          Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With M.A.N Custom wear, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
                         </p>
                       </div>
 
@@ -589,7 +589,7 @@ export default function Home() {
                       <div style={{ width: '560px', minWidth: '560px', paddingLeft: '220px', paddingRight: '40px', color: '#ffffff', boxSizing: 'border-box' }}>
                         <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.8rem' }}>End-to-End Oversight</h3>
                         <p style={{ fontSize: '0.95rem', lineHeight: 1.5, opacity: 0.95 }}>
-                          Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With Total Printing Solution, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
+                          Say goodbye to the stress of managing multiple vendors for materials, printing, and fulfillment. With M.A.N Custom wear, you have one point of contact (us!) overseeing every step of the process. The result? Consistent quality and efficient operations at every step.
                         </p>
                       </div>
                     </div>

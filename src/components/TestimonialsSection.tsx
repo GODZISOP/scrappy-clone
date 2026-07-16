@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    quote: "Total Printing Solution's uniforms have been a fantastic addition to our team. They're high-quality, comfortable, and durable, keeping us cool in summer. The fit is perfect and the professional design aligns well with our brand.",
+    quote: "M.A.N Custom wear's custom apparel and digital printing services have been a fantastic addition to our team. High-quality products and the professional design align well with our brand.",
     name: "Maynor Gutierrez",
     title: "Owner - Macawsome Heating and Cooling",
     avatar: "https://i.pravatar.cc/150?u=maynor"
   },
   {
-    quote: "We at Park Slope United Soccer Club are very happy customers of Total Printing Solution. Total Printing Solution and their team have designed, sourced, and produced high quality products at low cost with a very fast turnaround.",
+    quote: "We at Park Slope United Soccer Club are very happy customers of M.A.N Custom wear. M.A.N Custom wear and their team have designed, sourced, and produced high quality products at low cost with a very fast turnaround.",
     name: "Nathan Bell",
     title: "Executive Director - Park Slope United Soccer Club",
     avatar: "https://i.pravatar.cc/150?u=nathan"
   },
   {
-    quote: "Working with Total Printing Solution has been a game changer for our merchandise line. The attention to detail and quality is unmatched. Our customers love the new designs!",
+    quote: "Working with M.A.N Custom wear has been a game changer for our merchandise line. The attention to detail and quality is unmatched. Our customers love the new designs!",
     name: "Sarah Jenkins",
     title: "Founder - Urban Threads",
     avatar: "https://i.pravatar.cc/150?u=sarah"
@@ -27,7 +27,7 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?u=marcus"
   },
   {
-    quote: "Total Printing Solution delivers every single time. From screen printing to custom embroidery, they handle it all with true professionalism. Highly recommended!",
+    quote: "M.A.N Custom wear delivers every single time. From vinyl lettering and promotional materials to custom embroidery, they handle it all with true professionalism. Highly recommended!",
     name: "Emily Chen",
     title: "Creative Director - Studio Blanc",
     avatar: "https://i.pravatar.cc/150?u=emily"

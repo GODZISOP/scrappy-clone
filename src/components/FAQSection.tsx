@@ -3,16 +3,16 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What Is Your Turnaround Time For Bulk Custom T-Shirt Printing?",
-    answer: "Our standard turnaround time is 10-14 business days after proof approval. We also offer rush services if you need your order sooner."
+    question: "Is there a minimum order quantity?",
+    answer: "Absolutely not! Our motto is 'No Orders Too Small'. Whether you need a single custom t-shirt, a few promotional items, or a large bulk order for your entire business, we are here to help."
   },
   {
-    question: "Does Total Printing Solution Offer Design Services?",
-    answer: "Yes, Total Printing Solution offers basic branding and design services based on your existing logos and branding guidelines. We do not provide logo design or rebranding services, but can connect you with our affiliate partner agencies and freelancers if needed."
+    question: "Do you offer professional design services?",
+    answer: "Yes, we offer comprehensive design services including logos, 3D design, graphic design, animations, illustrations, layouts, and even tractor trailer canvas repair."
   },
   {
-    question: "Do You Offer International Shipping For Apparel Products?",
-    answer: "Yes, we ship internationally. Shipping rates and delivery times will vary depending on your location."
+    question: "What types of digital printing do you do?",
+    answer: "We cover almost everything! From color stickers, lawn signs, postcards, and posters to brochures, labels, calendars, gift cards, bookmarks, menus, canvas prints, hangtags, flyers, and 3D printing."
   }
 ];
 
