@@ -192,7 +192,7 @@ export default function ServicesSection() {
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                     <h3 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '6px', ...textStyle2 }}>{service.title}</h3>
-                    <p style={{ fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.3, opacity: 0.8, ...textStyle2 }}>{service.desc}</p>
+                    <p style={{ fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.3, ...textStyle2 }}>{service.desc}</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '10px', ...textStyle3 }}>
                       {service.tags.map(tag => (
                         <span key={tag} style={{ 
