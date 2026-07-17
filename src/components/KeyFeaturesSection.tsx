@@ -49,7 +49,7 @@ export default function KeyFeaturesSection() {
       list: ["Single Item Printing", "Small Batch Orders", "Massive Bulk Orders", "Flexible Customization", "No Hidden Fees"],
       bg: "#fef08a",
       color: "#111111",
-      image: "/mockup-bags.png"
+      image: "/image copy.png"
     },
     {
       id: 1,
