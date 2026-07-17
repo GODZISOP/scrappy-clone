@@ -113,7 +113,7 @@ export default function Home() {
         {!isMobile && (
           <>
             <nav className="nav-links">
-              <Link href="#" className="nav-link">Digital Printing <span className="nav-dot"></span></Link>
+              <Link href="/services" className="nav-link">Services <span className="nav-dot"></span></Link>
               <Link href="#" className="nav-link">Vinyl Lettering <span className="nav-dot"></span></Link>
               <Link href="#" className="nav-link">Embroidery <span className="nav-dot"></span></Link>
               <Link href="#" className="nav-link">Design Services <span className="nav-dot"></span></Link>
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
 
             <nav className="mobile-nav-links">
-              <Link href="#" className="mobile-nav-link">Digital Printing <span className="arrow">›</span></Link>
+              <Link href="/services" className="mobile-nav-link">Services <span className="arrow">›</span></Link>
               <Link href="#" className="mobile-nav-link">Vinyl Lettering <span className="arrow">›</span></Link>
               <Link href="#" className="mobile-nav-link">Embroidery <span className="arrow">›</span></Link>
               <Link href="#" className="mobile-nav-link">Design Services <span className="arrow">›</span></Link>
